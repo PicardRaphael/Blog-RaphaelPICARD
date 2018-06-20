@@ -1,0 +1,111 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Header */
+header {
+  background: url('../images/home-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+#navbar a {
+  color: white;
+}
+
+/*sm jusqu'à lg*/
+@media ((min-width:576px) and (max-width: 992px)) {
+  .navbar {
+    background: url('../images/home-bg.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  #navbar a {
+    color: white;
+  }
+}
+/* xs*/
+@media (max-width: 575px) {
+  .navbar {
+    background-image: none;
+    background-color: white;
+  }
+  #navbar a {
+    color: black;
+  }
+}
+
+header section {
+  padding: 1.5em 1.5em;
+}
+
+header hr {
+  border: 0.17em solid white;
+  width: 100px;
+}
+
+section h1{
+  font-size: 4em;
+  font-weight: 800;
+}
+
+section p{
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+header a {
+  font-weight: 800;
+}
+/* Header - END */
+main{
+  margin-top: 1.5em;
+}
+
+aside{
+  margin-top: 3em;
+
+}
+
+
+/* Paper */
+.card h2{
+  font-weight: 800;
+  font-size: 2.5em;
+  line-height: 1.05em;
+}
+
+.card p{
+  font-size: 1.5em;
+  line-height: 1em;
+}
+
+.card span{
+  font-style: italic;
+}
+
+.paperBlog{
+  border: none;
+  border-bottom: 1px solid rgba(0,0,0,.125);
+}
+
+.card div:nth-child(2n+1){
+  padding: 0px;
+  padding-bottom: 1.5em;
+  padding-top: 1.5em;
+}
+/* Paper - END */
+
+/* Aside*/
+.card h3{
+  background-color: #007bff;
+  color: white;
+  font-weight: 400;
+  font-style: italic;
+}
+
+aside .card{
+  margin-bottom: 1em
+}
+/* Aside - END */

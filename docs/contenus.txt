@@ -1,0 +1,73 @@
+Textes
+######
+
+A la dérive
+
+Un blog collaboratif de développeurs web dérivant délibérément au beau milieu de l'espace
+
+---
+
+Ivre, il refait tous les challenges en un week-end sans dormir.
+
+Ou comment j'ai appris plein de choses en faisant une nouvelle fois tous les challenges que j'avais loupé.
+
+Posté par Alexandre le 13 juillet 2017 dans #MaVieDeDev.
+
+---
+
+POO or not POO, that is the question.
+
+La POO est-elle vraiment indispensable pour une architecture solide ? Etude de cas avec PHP.
+
+Posté par Julie le 4 juillet 2017 dans #TeamBack.
+
+---
+
+Git, pour les n00bs.
+
+Un p'tit récap rapide pour tout ceux qui, comme moi, ont galéré sur ce magnifique outil de versionning.
+
+Posté par Lucie le 19 juin 2017 dans #Collaboration.
+
+---
+
+Le syndrome de la page blanche
+
+Cette frustration quand le code ne vient pas, le temps passe, la deadline approche…
+
+Posté par Xavier le 6 mai 2017 dans #MaVieDeDev.
+
+---
+
+Responsive
+##########
+
+A noter
+*******
+- en version medium, il y a une marge d'une colonne de chaque côté de la page.
+- en version large, une sidebar apparait.
+
+Styles des textes
+#################
+
+Font = Open Sans en 3 graisses : 300, 400, 800
+
+syntaxe : element / font-size font-color / font-weight
+
+mobile
+******
+- nav 18px / 12px #777 / 800
+- heading h1 50px / 800
+- heading span 24px / 300
+
+- post-preview h2 30px / 800
+- post-preview h3 24px / 300
+- post-meta p 18px / 400
+
+- category 36px / 800
+
+desktop
+*******
+- heading h1 80px
+- category 30px
+- post-preview h2 36px
