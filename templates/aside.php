@@ -11,10 +11,9 @@
           <div class="card">
             <h3 class="card-header">Catégories</h3>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">TeamBack</li>
-              <li class="list-group-item">TeamFront</li>
-              <li class="list-group-item">Collaboration</li>
-              <li class="list-group-item">Ma vie de dev</li>
+              <?php foreach($listCategories as $categorie) : ?>
+              <li class="list-group-item"><?= $categorie['name'] ?></li>
+              <?php endforeach;?>
             </ul>
           </div>
 
@@ -22,10 +21,9 @@
           <div class="card">
             <h3 class="card-header">Auteurs</h3>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">Alexandre</li>
-              <li class="list-group-item">Julie</li>
-              <li class="list-group-item">Lucie</li>
-              <li class="list-group-item">Xavier</li>
+              <?php foreach($listAuthors as $author) : ?>
+              <li class="list-group-item"><?= $author['name'] ?></li>
+              <?php endforeach;?>
             </ul>
           </div>
 

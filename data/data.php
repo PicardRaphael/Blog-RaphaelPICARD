@@ -10,12 +10,7 @@
 
   //Si erreur alors on l'attrape et on execute le code à l'intérieur de cache
   try {
-
-    $pdo = new PDO($dsn, $username, $password);
-
-  }catch (PDOException $e) {
-
-    echo 'Connection failed : ' . $e->getMessage();
-
+      $pdo = new PDO($dsn, $username, $password);
+  } catch (PDOException $e) {
+      echo 'Connection failed : ' . $e->getMessage();
   }
-?>
