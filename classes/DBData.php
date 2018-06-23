@@ -20,7 +20,7 @@ class DBData {
     }
   }
   // Méthode getPosts: Permet de retourner plusieurs posts.
-  public function getPosts($order = 'DESC', $nbr = null, $start = 0) {
+  public function getPosts($order = 'DESC', $nbr = null, $start = 0, $categorieID = null) {
     $sql = "SELECT
               posts.id AS 'posts_id',
               posts.published_date,
@@ -35,14 +35,17 @@ class DBData {
               ON posts.authors_id = authors.id
             INNER JOIN categories
               ON posts.categories_id = categories.id
-            ORDER BY
-              posts.published_date ";
+            WHERE categories.id ";
+    if(!is_null($categorieID)){
+      $sql .= '= '.$categorieID;
+    }
+
     $orderList = array('ASC', 'DESC');
     // Si j'ai bien un ordre proposé
     // http://php.net/manual/fr/function.in-array.php
     if (in_array($order, $orderList)) {
-      // J'ajoute l'ordre proposé à mon SQL
-      $sql .= $order;
+      // J'/templates/categorie.php?categorie=Teamfrontajoute l'ordre proposé à mon SQL
+      $sql .= ' ORDER BY posts.published_date '.$order;
     }
     // Si j'ai un arguement pour mettre une limite
     if (!is_null($nbr) && is_int($nbr) && is_int($start)) {
@@ -54,6 +57,9 @@ class DBData {
         $sql .= $start.','.$nbr;
       */
     }
+
+
+
     $pdoStatement = $this->pdo->query($sql);
     $allResults = $pdoStatement->fetchAll(PDO::FETCH_ASSOC);
     return $allResults;
